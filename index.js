@@ -3,6 +3,7 @@ const Circle = require('./lib/circle.js');
 const Triangle = require('./lib/triangle.js');
 const Square = require('./lib/square.js');
 const fs = require('fs');
+var y = 125;
 
 
 inquirer
@@ -30,6 +31,10 @@ inquirer
         },
     ])
     .then((data)=> { 
+        if (data.text.length > 3) {
+            console.log("You may only enter up to 3 characters. Please try again.");
+            return;
+        }
         var logoRender;
         switch(data.shape)  {
             case "Circle":
@@ -40,6 +45,7 @@ inquirer
                 break;
             case "Triangle":
                 logoRender = new Triangle(data.textColor, data.backgroundColor, data.text);
+                y=150;
                 break;
         }
 
@@ -49,9 +55,9 @@ inquirer
 
         ${rendString}
         
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill=${logoRender.textColor}>${logoRender.text}</text>
+        <text x="150" y="${y}" font-size="60" text-anchor="middle" fill=${logoRender.textColor}>${logoRender.text}</text>
         
-    </svg>`;
+        </svg>`;
         
         fs.writeFile("./output/logo.svg", logo, (err) =>
             err ? console.log(err) : console.log("Your SVG logo is ready."));
