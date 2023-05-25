@@ -3,9 +3,11 @@ const Circle = require('./lib/circle.js');
 const Triangle = require('./lib/triangle.js');
 const Square = require('./lib/square.js');
 const fs = require('fs');
+
+//the y coordinate on the page for the logo
 var y = 125;
 
-
+//gathers user input to generate the logo and a shape object
 inquirer
     .prompt([
         {
@@ -59,6 +61,7 @@ inquirer
         
         </svg>`;
         
+        //create/overwrite the .svg file in the output folder
         fs.writeFile("./output/logo.svg", logo, (err) =>
             err ? console.log(err) : console.log("Your SVG logo is ready."));
     })
