@@ -21,6 +21,10 @@
 ## Usage
  Start the program with the command node index.js. Answer all the prompts. For text and background color, you can enter either a color keyword, ie red, blue, yellow, etc., or you can enter a hexadecimal color value. For text on the logo, you can enter up to 3 characters.
 
+A video showcasing the process of generating the logo and the successful tests can be viewed at https://drive.google.com/file/d/1DduoSFnafnFI0VvftUZVQlffGECv6Yy-/view.
+
+
+
 ## Installation
  This project is dependent on Inquirer and Jest. Run npm install in the terminal before use to install the necessary modules.
 
