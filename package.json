@@ -1,6 +1,28 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "name": "svg-logo-creator",
+  "description": "A program to create a simple SVG logo.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelaRB/SVG-logo-creator.git"
+  },
+  "author": "Michaela Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelaRB/SVG-logo-creator/issues"
+  },
+  "homepage": "https://github.com/MichaelaRB/SVG-logo-creator#readme"
 }
