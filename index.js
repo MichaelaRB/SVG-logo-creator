@@ -79,8 +79,7 @@ function isHexColor(color) {
             case false:
                 break;
             case true:
-                console.log(color.charAt(i));
-                if(color.charAt(i)==="a"||"b"||"c"||"d"||"e"||"f") break;
+                if(color.charAt(i)==="a"||"b"||"c"||"d"||"e"||"f")  break; 
                 return color;
         }
     }
