@@ -7,11 +7,7 @@
 
  [Installation](#installation)
 
- [Contribution Guidelines](#guidelines)
-
  [Tests](#tests)
-
- [Licenses](#licenses)
 
  [Questions](#questions)
 
@@ -24,12 +20,9 @@
 A video showcasing the process of generating the logo and the successful tests can be viewed at https://drive.google.com/file/d/1DduoSFnafnFI0VvftUZVQlffGECv6Yy-/view.
 
 
-
 ## Installation
  This project is dependent on Inquirer and Jest. Run npm install in the terminal before use to install the necessary modules.
 
-## Guidelines
- N/A
 
 ## Tests
  Tests are performed using Jest. Run npm jest in the terminal to perform tests. The tests check to ensure that the render methods in each shape class are returning proper strings for an SVG shape.
