@@ -20,6 +20,7 @@ Manually creating a logo can be a tedious process. This is a tool designed to ma
 A video showcasing the process of generating the logo and the successful tests can be viewed at https://drive.google.com/file/d/1DduoSFnafnFI0VvftUZVQlffGECv6Yy-/view.
 
 An example of a successfully generated logo:
+
 ![logo](https://github.com/MichaelaRB/SVG-logo-creator/assets/126620642/ac09cf9f-93c9-40a3-a7fa-510677f069ce)
 
 
