@@ -38,18 +38,21 @@ inquirer
             return;
         }
         var logoRender;
+        var textColor = isHexColor(data.textColor);
+        var backgroundColor = isHexColor(data.backgroundColor);
         switch(data.shape)  {
             case "Circle":
-                logoRender = new Circle(data.textColor, data.backgroundColor, data.text);
+                logoRender = new Circle(textColor, backgroundColor, data.text);
                 break;
             case "Square":
-                logoRender = new Square(data.textColor, data.backgroundColor, data.text);
+                logoRender = new Square(textColor, backgroundColor, data.text);
                 break;
             case "Triangle":
-                logoRender = new Triangle(data.textColor, data.backgroundColor, data.text);
+                logoRender = new Triangle(textColor, backgroundColor, data.text);
                 y=150;
                 break;
         }
+
 
         const rendString = logoRender.render();
 
@@ -57,7 +60,7 @@ inquirer
 
         ${rendString}
         
-        <text x="150" y="${y}" font-size="60" text-anchor="middle" fill=${logoRender.textColor}>${logoRender.text}</text>
+        <text x="150" y="${y}" font-size="60" text-anchor="middle" fill="${logoRender.textColor}">${logoRender.text}</text>
         
         </svg>`;
         
@@ -65,3 +68,21 @@ inquirer
         fs.writeFile("./output/logo.svg", logo, (err) =>
             err ? console.log(err) : console.log("Your SVG logo is ready."));
     })
+
+
+//checks to see if the color value is a hex value or not, returns a string starting with # if is hexadecimal.
+function isHexColor(color) {
+    if(color.length!==6) return color;
+    for (var i = 0; i < color.length; i++)
+    {
+        switch(isNaN(color.charAt(i))) {
+            case false:
+                break;
+            case true:
+                console.log(color.charAt(i));
+                if(color.charAt(i)==="a"||"b"||"c"||"d"||"e"||"f") break;
+                return color;
+        }
+    }
+    return "#" + color;
+}
